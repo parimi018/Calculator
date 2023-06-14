@@ -2,10 +2,10 @@ const output = document.querySelector(".output")
 const result = document.querySelector(".result")
 const keys = document.querySelectorAll('button')
 
-
 keys.forEach(key=>{
     key.addEventListener("click",calculate);
 });
+
 function calculate()
 {
     let buttonText = this.innerText;
@@ -22,7 +22,7 @@ function calculate()
     }
     if(buttonText ==='='){
         result.innerText = eval(output.innerText);
-        output.textContent="";
+        output.textContent=result.innerText;
     }
     else{
         output.textContent+=buttonText;
